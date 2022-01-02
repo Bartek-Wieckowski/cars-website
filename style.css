@@ -1,0 +1,88 @@
+
+*, *::before, *::after { box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { margin: 0; padding: 0; font-weight: 400; font-family: "Special Elite", cursive; background-color: #ccc }
+html,body { overflow-x: hidden; }
+html { font-size: 10px; scroll-behavior: smooth;}
+
+
+section { max-width: 1980px; width: 100%; height:100vh; margin: 0 auto 3rem; position: relative; left: 0; box-shadow: .5rem .5rem 1rem #aaa; padding: 5rem 0; transition: left .5s, transform .5s ; }
+section.change{left: 25rem; transform: rotateY(10deg);}
+strong { font-weight: 600; }
+
+p { font-weight: 400; font-size: 2rem; line-height: 24px; margin-bottom: 15px; }
+
+h1, h2, h3, h4, h5, h6, ul, li { margin: 0; padding:0; }
+
+
+h1 { font-weight: 400; font-size: 3.6rem; line-height: 39px; margin-bottom: 20px; }
+h2 { font-weight: 400; font-size: 3.6rem; line-height: 36px; margin-bottom: 18px; }
+h3 { font-weight: 400; font-size: 2.4rem; line-height: 32px; margin-bottom: 15px; }
+
+@media (max-width: 1439.98px) {
+    h1 { font-weight: 400; font-size: 3.2rem; line-height: 39px; margin-bottom: 20px; }
+    h2 { font-weight: 400; font-size: 2.8rem; line-height: 29px; margin-bottom: 15px; }
+    h3 { font-weight: 400; font-size: 2rem; line-height: 24px; margin-bottom: 12px; }
+    p { font-weight: 400; font-size: 1.8rem; line-height: 24px; margin-bottom: 15px; }
+}
+
+@media (max-width: 1199.98px) {
+    h1 { font-weight: 400; font-size: 2.8rem; line-height: 39px; margin-bottom: 20px; }
+    h2 { font-weight: 400; font-size: 2.4rem; line-height: 29px; margin-bottom: 15px; }
+    h3 { font-weight: 400; font-size: 1.8rem; line-height: 24px; margin-bottom: 12px; }
+    p { font-weight: 400; font-size: 1.6rem; line-height: 24px; margin-bottom: 15px; }
+} 
+
+@media (max-width: 991.98px) {
+    section {margin: 0 auto 5rem;}
+}
+
+ @media (max-width: 767.98px) {
+    h2{text-align: center;}
+} 
+
+@media (max-width: 575.98px) {
+    h1 { font-weight: 400; font-size: 2.2rem; line-height: 30px; margin-bottom: 15px; }
+    h2 { font-weight: 400; font-size: 2rem; line-height: 28px; margin-bottom: 15px; }
+    h3 { font-weight: 400; font-size: 1.6rem; line-height: 24px; margin-bottom: 12px; }
+} 
+
+
+a,
+a:hover { text-decoration: none; }
+
+button:focus { outline: unset; }
+li{ list-style: none; }
+
+
+/* LAYOUT ELEMENT */
+/* .container-fluid { max-width:1320px; } */
+.wrapper { max-width: 1116px; width: 100%; margin: 0 auto; position: relative; z-index: 99; }
+@media (max-width: 1199.98px) {.wrapper { max-width: 929px;}}
+@media (max-width: 991.98px) {.wrapper { max-width: 692px;}}
+@media (max-width: 767.98px) {.wrapper { max-width: 550px;}}
+@media (max-width: 575.98px) {}
+.d-grid{
+    display:grid;
+}
+
+/* menu */
+ .menu{width: 4rem; height: 4rem; position: fixed; top: 2rem; left: 2rem; z-index: 10; cursor: pointer; transition: all .5s;}
+ .menu.change{transform: rotate(45deg); left: 25rem;}
+ .menu .line{width: 100%; height: .2rem; background-color: #fff; margin: .3rem 0; box-shadow: .1rem .1rem .3rem #222; transition: transform .5s;}
+ .change .line-1{transform: rotate(270deg) translateX(-0.4rem);}
+ .change .line-2{transform: rotate(360deg) translateY(-0.4rem);}
+
+ .navbar{width: 25rem; height: 100vh; background-color: #fff; position: fixed; top: 0; left: -25rem; padding: 4rem 0 0 4rem; transition: left .5s; z-index: 10;}
+ .navbar.change{left:0;}
+ .navbar li{margin-bottom: 2rem;}
+ .navbar .navbar-link{font-size: 1.5rem; font-weight: 600; margin: 2rem 0; color: #777; letter-spacing: .3rem; text-transform: uppercase; transition: color .3s;}
+ .navbar .navbar-link:hover{color: #111;}
+
+ .wrapper-per{
+     width:100%;
+     perspective: 50rem;
+     overflow: hidden;
+ }
+#hero {background: url(images/bg-section1.jpg) center no-repeat; background-size: cover;}
+#hero h1{font-size: 10rem; font-weight: bolder; color: #fff; margin: 10rem 0; letter-spacing: 1rem; text-align: center; text-shadow: .3rem .3rem .5rem #555;text-transform: uppercase}
+#hero img {width:100%; max-width:990px;}
